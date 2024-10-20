@@ -65,7 +65,7 @@ This procedural voxel world generation code can be implemented in Python using l
 > Defines important configuration values like screen resolution, field of view (FOV), camera movement speed, and mouse sensitivity.
 > Configures parameters for perspective projection and defines basic colors for the background and objects.
 - Output Window:
-![VID-20241020-WA0022_1](https://github.com/user-attachments/assets/2bebdb70-348a-4b2d-b291-b772036352a2)
+![Screenshot 2024-10-19 143112](https://github.com/user-attachments/assets/7f8ec940-b7b9-4293-86ae-445eb6240bdb)
 
 # Step 3
 - VoxelEngine (Main.py):
