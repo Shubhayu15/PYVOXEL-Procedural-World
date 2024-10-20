@@ -65,5 +65,58 @@ This procedural voxel world generation code can be implemented in Python using l
 > Defines important configuration values like screen resolution, field of view (FOV), camera movement speed, and mouse sensitivity.
 > Configures parameters for perspective projection and defines basic colors for the background and objects.
 - Output Window:
-![Screenshot 2024-10-19 143112](https://github.com/user-attachments/assets/369b0631-395d-48ea-9400-6ee1b9eeea81)
+![VID-20241020-WA0022_1](https://github.com/user-attachments/assets/2bebdb70-348a-4b2d-b291-b772036352a2)
 
+# Step 3
+- VoxelEngine (Main.py):
+
+> Initializes the game, handles OpenGL context, and manages the game loop.
+> Includes essential functions like updating, rendering, and event handling (player inputs, quitting).
+> Uses the moderngl library for OpenGL rendering, enabling 3D graphics, depth testing, and face culling for efficient rendering.
+- Player (Controls):
+
+> Provides first-person camera movement, controlled by keyboard (WASD for movement, Q/E for up/down) and mouse for looking around.
+> Inherits from a Camera class and allows the player to navigate through the 3D world.
+- Textures (Voxel Texturing):
+
+> Manages loading and applying textures to the voxel world.
+> Loads texture images from assets, flips them to correct orientation, and applies them using OpenGL texture units. Filters and mipmaps are applied to optimize texture rendering.
+- Chunk (Procedural Generation):
+
+> Generates voxel data for chunks using simplex noise for procedural terrain creation.
+> Builds voxel arrays, where each chunk is a 3D grid of blocks. Uses noise-based values to create height variations and basic terrain features.
+> Chunks are rendered via mesh data generated from the voxel array, and the mesh is updated dynamically.
+- Procedural Generation:
+> - Noise-Based Terrain: The terrain is generated using simplex noise to simulate natural elevation. The system assigns voxel types (air or solid blocks) based on the noise value, creating varying terrain height within each chunk.
+
+> - Chunk Management: Each chunk is a fixed-size 3D grid (e.g., 16x16x16 blocks) that stores voxel data. The chunks are dynamically created as the player moves through the world, though chunk loading/unloading based on player position could be added for optimization.
+- Output Window:
+![Screenshot 2024-10-20 225053](https://github.com/user-attachments/assets/689df152-7370-4a38-b119-c16bf3325f12)
+
+# Step 4
+- Rendering Pipeline:
+
+> Utilizes ModernGL for rendering voxels, ensuring performance optimizations via efficient OpenGL techniques.
+> Supports depth testing, face culling, and blending, improving rendering quality and performance.
+> Textures are processed with anisotropic filtering and mipmaps to provide smooth visual details at varying distances.
+- Chunk-Based World Generation:
+
+> The world is composed of multiple chunks (each being a grid of voxels), which are independently built and rendered.
+> Voxel data is stored in a 3D grid within each chunk, and mesh generation is performed for each chunk to optimize rendering.
+> Supports a flexible and expandable system for adding new voxel types and properties.
+- Player Controls and Camera System:
+
+> Features smooth FPS-style movement with adjustable player speed, rotation, and mouse sensitivity.
+> Camera FOV (Field of View) and aspect ratio are calculated dynamically for an immersive 3D experience.
+> Player interactions are facilitated through continuous updates to the scene, which ensure real-time feedback.
+- Texture Management:
+
+> Efficient texture loading using Pygame to import and apply textures from image files.
+> Supports flipping and resizing textures, and converts them to ModernGL-compatible formats for shader usage.
+> Mipmapping ensures textures scale appropriately at different distances.
+- Performance Optimizations:
+
+> Delta time calculations and frame-rate monitoring ensure smooth updates regardless of the system performance.
+> Memory management techniques, such as garbage collection, ensure efficient resource utilization.
+- Output Window:
+![Screenshot 2024-10-20 225005](https://github.com/user-attachments/assets/9fbed401-f06e-4ebf-9524-e377d9c2cdaf)
