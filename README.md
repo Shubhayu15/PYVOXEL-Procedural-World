@@ -5,7 +5,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org)
 [![OpenGL](https://img.shields.io/badge/OpenGL-3.3+-red.svg)](https://www.opengl.org)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Documentation](https://img.shields.io/badge/docs-mkdocs-blue.svg)](https://your-docs-url.com)
 
@@ -462,7 +462,18 @@ Remember to check out the [documentation](docs/) for detailed implementation gui
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE)
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
+
+The BSD 3-Clause License is a permissive license that allows you to:
+- Use the software commercially
+- Modify the source code
+- Distribute the software
+- Make private changes
+
+While requiring you to:
+- Include the original copyright notice
+- Include the license text
+- Not use the authors' names to promote derived products without permission
 
 ---
 
