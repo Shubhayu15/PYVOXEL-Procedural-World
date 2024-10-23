@@ -451,15 +451,6 @@ If you've found this project helpful or interesting, consider:
 
 2. **Star the Project**: Show your support by starring [PYVOXEL-Procedural-World](https://github.com/Shubhayu15/PYVOXEL-Procedural-World)! Every star helps others discover this project.
 
-3. **Join the Community**: Share your experiences, ask questions, and connect with other developers:
-   - Create issues for bugs or feature requests
-   - Submit pull requests to help improve the project
-   - Share your modifications and improvements
-
-Remember to check out the [documentation](docs/) for detailed implementation guidance and the [contributing guidelines](CONTRIBUTING.md) if you'd like to get involved!
-
-[Previous sections continue...]
-
 ## 📄 License
 
 This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
