@@ -11,7 +11,7 @@
 
 [Features](#✨-features) • [Quick Start](#⚡-quick-start) • [Architecture](#🏗️-architecture) • [Performance](#⚡️-performance) • [Development](#👨‍💻-development) • [Contributing](#👥-contributing)
 
-![Screenshot 2024-10-23 211501](https://github.com/user-attachments/assets/b4d2cfb5-f052-4c0d-b4af-4af83a4140a2)
+![main](https://github.com/user-attachments/assets/8232ce8e-ac2b-4863-b80c-4941f0006e0e)
 
 *Create, explore, and modify infinite procedurally generated worlds*
 
@@ -68,14 +68,10 @@ python main.py --world-size 512 --render-distance 12 --seed 12345
 |----------|--------|-------------|
 | **Movement** | Forward/Back | W/S |
 |  | Left/Right | A/D |
-|  | Jump/Fly | Space |
-|  | Sprint | Left Shift |
+|  | Fly Up/Down | Space |
 | **Building** | Place Block | Right Click |
 |  | Break Block | Left Click |
 |  | Pick Block | Middle Click |
-| **Interface** | Inventory | E |
-|  | Debug Info | F3 |
-|  | Screenshot | F2 |
 
 ## 🏗️ Architecture
 
@@ -194,7 +190,7 @@ pyvoxel/
 Follow our step-by-step development process to understand how PyVoxel was built from the ground up:
 
 ### Step 1: Creating OpenGL Window
-![Screenshot 2024-10-19 143038](https://github.com/user-attachments/assets/8f8cd6ca-24d6-4e1b-9b0a-92baa8f094d7)
+![Step1](https://github.com/user-attachments/assets/1a22e37d-a099-4b56-ad2e-3ede4487b4db)
 
 ```python
 import moderngl
@@ -219,7 +215,7 @@ class Game:
 - Basic error handling implementation
 
 ### Step 2: Initial Setup Window
-![Screenshot 2024-10-19 143112](https://github.com/user-attachments/assets/1bad827b-ca9f-4ea3-a9a1-857b76bf62a8)
+![Step2](https://github.com/user-attachments/assets/e2d620bc-66f3-468f-914d-6dbf78e9bbb1)
 
 ```python
 class Window:
@@ -241,7 +237,7 @@ class Window:
 - Frame timing implementation
 
 ### Step 3: Chunk Generation
-![Screenshot 2024-10-20 225053](https://github.com/user-attachments/assets/5258a25e-69b1-48df-86e6-da70e3025ca8)
+![Step3](https://github.com/user-attachments/assets/cdc0df5b-1d24-4c20-9f67-8a4ded56a858)
 
 ```python
 class Chunk:
@@ -266,7 +262,7 @@ class Chunk:
 - Chunk boundary handling
 
 ### Step 4: Generate World of Chunks
-
+![Step4](https://github.com/user-attachments/assets/93b16edd-b2e3-487e-ac50-6b43dcc9a531)
 
 ```python
 class World:
@@ -289,7 +285,7 @@ class World:
 - Basic terrain shape generation
 
 ### Step 5: Add Shaders
-![Screenshot 2024-10-20 225005](https://github.com/user-attachments/assets/115ead4a-334c-41c2-aefd-49c351249ed1)
+![Step5](https://github.com/user-attachments/assets/0c3667ff-6a0b-412d-a533-fe884fac4361)
 
 ```glsl
 #version 330 core
@@ -321,7 +317,7 @@ void main() {
 - Normal mapping support
 
 ### Step 6: Add Packed Data
-![Screenshot 2024-10-23 210019](https://github.com/user-attachments/assets/39b6e9d9-6729-4445-bc1b-ff613a11021a)
+![Step6](https://github.com/user-attachments/assets/47c090d1-1d06-46a2-b188-2dfd5953879a)
 
 ```python
 class VoxelData:
@@ -346,7 +342,7 @@ class VoxelData:
 - Extensible property system
 
 ### Step 7: Voxel Interaction
-![step7](https://github.com/user-attachments/assets/0de76749-25bf-4a7d-88f8-e39dcdf442f6)
+![step7](https://github.com/user-attachments/assets/1e14af6c-3e47-494f-bd87-4411054898cc)
 
 ```python
 class RayCaster:
@@ -371,7 +367,7 @@ class RayCaster:
 - Interactive feedback system
 
 ### Step 8: Frustum Culling
-![Screenshot 2024-10-23 210218](https://github.com/user-attachments/assets/b2e80db6-007a-4bb7-8b2b-a029485b28a6)
+![Step8](https://github.com/user-attachments/assets/040e68db-a259-4018-af0e-c181efaa1ce9)
 
 ```python
 class Frustum:
@@ -395,7 +391,7 @@ class Frustum:
 - Performance monitoring
 
 ### Step 9: Texture Array
-![step9](https://github.com/user-attachments/assets/156bf5d4-f16b-48ff-8b91-2f9676930fa9)
+![step9](https://github.com/user-attachments/assets/200bf9d4-7fdd-4f81-a90a-41ff52237e41)
 
 ```python
 class TextureArray:
@@ -418,7 +414,7 @@ class TextureArray:
 - Mipmap generation
 
 ### Step 10: Terrain Generation World
-![step10](https://github.com/user-attachments/assets/6fdb65f6-5eae-4c2e-883b-22df48f429eb)
+![step10](https://github.com/user-attachments/assets/bef97159-b49b-4027-9c9f-87d4dfe189b2)
 
 ```python
 class TerrainGenerator:
